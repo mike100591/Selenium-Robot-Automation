@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.6.5 on win32)" generated="20200522 20:20:49.294" rpa="false">
+<suite id="s1" name="TestCases" source="C:\development\Selenium Robotframework\Data Driven Testing\TestCases">
+<suite id="s1-s1" name="TC 002" source="C:\development\Selenium Robotframework\Data Driven Testing\TestCases\TC_002.robot">
+<test id="s1-s1-t1" name="TC_001 Login Logout Functionality">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${var1}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200522 20:20:49.797" level="INFO">Opening browser 'chrome' to base url 'http://www.thetestingworld.com'.</msg>
+<status status="PASS" starttime="20200522 20:20:49.797" endtime="20200522 20:20:57.352"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200522 20:20:57.352" endtime="20200522 20:20:58.464"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[text()='Login']</arg>
+</arguments>
+<msg timestamp="20200522 20:20:58.464" level="INFO">Clicking element 'xpath://a[text()='Login']'.</msg>
+<status status="PASS" starttime="20200522 20:20:58.464" endtime="20200522 20:20:59.090"></status>
+</kw>
+<kw name="Read Number of Rows" library="UserKeywords">
+<arguments>
+<arg>Sheet1</arg>
+</arguments>
+<assign>
+<var>${row}</var>
+</assign>
+<kw name="Fetch Number Of Rows" library="ReadData">
+<arguments>
+<arg>${sheetname}</arg>
+</arguments>
+<assign>
+<var>${maxr}</var>
+</assign>
+<msg timestamp="20200522 20:20:59.091" level="INFO">${maxr} = 4</msg>
+<status status="PASS" starttime="20200522 20:20:59.091" endtime="20200522 20:20:59.091"></status>
+</kw>
+<msg timestamp="20200522 20:20:59.091" level="INFO">${row} = 4</msg>
+<status status="PASS" starttime="20200522 20:20:59.091" endtime="20200522 20:20:59.091"></status>
+</kw>
+<kw name="${i} IN RANGE [ 1 | ${row}+1 ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200522 20:20:59.092" level="FAIL">Variable '${username}' not found.</msg>
+<status status="FAIL" starttime="20200522 20:20:59.092" endtime="20200522 20:20:59.092"></status>
+</kw>
+<status status="FAIL" starttime="20200522 20:20:59.092" endtime="20200522 20:20:59.092"></status>
+</kw>
+<status status="FAIL" starttime="20200522 20:20:59.092" endtime="20200522 20:20:59.092"></status>
+</kw>
+<status status="FAIL" starttime="20200522 20:20:49.796" endtime="20200522 20:20:59.093" critical="yes">Variable '${username}' not found.</status>
+</test>
+<status status="FAIL" starttime="20200522 20:20:49.317" endtime="20200522 20:20:59.094"></status>
+</suite>
+<status status="FAIL" starttime="20200522 20:20:49.296" endtime="20200522 20:20:59.095"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="TestCases">TestCases</stat>
+<stat pass="0" fail="1" id="s1-s1" name="TC 002">TestCases.TC 002</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
